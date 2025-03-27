@@ -1,0 +1,34 @@
+<main class="w-full min-h-screen">
+    <div class="h-screen grid grid-cols-2 gap-4 items-center *:">
+        <figure>
+            <img
+                id="image-hero"
+                src="/src//assets/hero.jpg"
+                alt="Imagen sobre una familia cubana"
+                class="block object-cover "
+                decoding="async"
+            />
+        </figure>
+
+        <div class="p-4">
+            <h1 class="text-6xl max-w-2xl text-left">
+                <span class="text-sky-800 font-bold">Ayudemos a Cuba:</span> Dona
+                y regala esperanza a quienes más lo necesitan
+            </h1>
+            <p class="text-xl">
+                Cada semana, tres familias reciben alimentos gracias a
+                donaciones como la tuya. Participa y sé parte del cambio.
+            </p>
+        </div>
+    </div>
+</main>
+
+<script>
+    const imagen = document.querySelector("#image-hero");
+
+    document.addEventListener("load", () => {
+        if (imagen) {
+            imagen?.classList.add("hidden ");
+        }
+    });
+</script>

@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --drop-shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25); 
+}
+@font-face {
+    font-family: 'DistantGalaxy';
+    src: url('/fonts/DistantGalaxy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .container{
+    min-height: 100vh;
+    padding: 1rem 3rem;
+  }
+
+  .titulos{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }

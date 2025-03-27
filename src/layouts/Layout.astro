@@ -1,0 +1,36 @@
+---
+import "./src/styles/global.css";
+import Header from "../components/Header.astro";
+
+
+let title = "Hoy se come";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta
+			name="description"
+			content="Página para ayudar a las personas de Cuba mediante sorteos"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+</style>
