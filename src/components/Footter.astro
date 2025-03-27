@@ -1,4 +1,10 @@
-<footer class="w-full bg-slate-700 text-slate-100 p-4">
+---
+import Instagram from "../assets/instagram.svg";
+import Facebook from "../assets/facebook.svg";
+import Youtube from "../assets/youtube.svg";
+---
+
+<footer class="w-full  text-slate-100 ">
     <div class="w-full grid grid-cols-3 justify-center items-center">
         <div class="mx-auto">
             <p>Donantes</p>
@@ -10,13 +16,35 @@
             <p>Facebook</p>
             <p>Youtube</p>
         </div>
-        <div class="mx-auto">
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Youtube</p>
+        <div class="mx-auto flex flex-col gap-2">
+            <div class="flex gap-2 justify-center items-center">
+                <Instagram width={40} height={40} fill="currentColor" />
+                <a href="#">Instagram</a>
+            </div>
+            <div class="flex gap-2 justify-center items-center">
+                <Facebook width={40} height={40} fill="currentColor" />
+                <a href="#">Facebook</a>
+            </div>
+            <div class="flex gap-2 justify-center items-center">
+                <Youtube width={40} height={40} fill="currentColor"/>
+                <a href="#">Youtube</a>
+            </div>
         </div>
     </div>
     <div class="text-center p-2">
         <p class="mt-10">Todos los derechos reservados</p>
     </div>
 </footer>
+
+
+
+<style>
+    footer{
+        width: 100%;
+        background-image: url('/src//assets//malecon.jpg');
+        filter: blur(rgba(218, 5, 5, 0.4));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
