@@ -1,6 +1,8 @@
-<header class="w-full  text-fuchsia-950">
+<header class="w-full  fixed top-0">
     <nav class="flex justify-between px-8 py-2">
-        <p class="text-sky-700 text-2xl font-black">Ayuda <span class="text-red-700 text-3xl font-black">a Cuba</span></p>
+        <p class="text-sky-700 text-2xl font-black">
+            Ayuda <span class="text-red-700 text-3xl font-black">a Cuba</span>
+        </p>
         <div class="flex gap-4">
             <a href="#sobrenosotros">Sobre Nosotros</a>
             <a href="#donantes">Donantes</a>
@@ -12,10 +14,45 @@
 
 <style>
     a {
-       font-size: 1.2rem;
-       font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 700;
+        animation: links-color 0.3s ease linear both;
+        animation-timeline: scroll();
+        animation-range: 0 250px;
+        color: purple;
     }
-    a:hover{
+    a:hover {
         text-decoration: underline;
+    }
+
+    header {
+        background: transparent;
+        animation: header-blur-scroll 0.3s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 250px;
+        border-bottom: 1px solid transparent;
+    }
+
+    @keyframes header-blur-scroll {
+        0% {
+            backdrop-filter: blur(0px);
+            background: transparent;
+        }
+
+        100% {
+            backdrop-filter: blur(10px);
+            background: rgba(240, 234, 234, 0.5);
+            padding-bottom: var(--spacing-6);
+            border-bottom-color: black;
+        }
+    }
+
+    @keyframes links-color {
+        0% {
+            color: purple;
+        }
+        100% {
+            color: white;
+        }
     }
 </style>
