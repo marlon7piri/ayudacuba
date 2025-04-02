@@ -1,15 +1,34 @@
 ---
-import CardDonantes from "./ui/CardDonantes.astro";
+import { donadores } from "@/constants/donadores";
 ---
 
 <main class="container">
-    <h2 class="titulos shadow-xl w-max px-6 py-2 mx-auto rounded-md" id="donantes">
+    <h2
+        class="titulos shadow-xl w-max px-6 py-2 mx-auto rounded-md"
+        id="donantes"
+    >
         Donantes
     </h2>
-   <div class="grid grid-cols-4 gap-4 mt-10">
-    <CardDonantes />
-    <CardDonantes />
-    <CardDonantes />
-    <CardDonantes />
-   </div>
+    <div class=" grid  grid-cols-4  sm:grid-cols-2 items-center justify-center gap-2 mt-10 p-10">
+        {
+            donadores.map((donante, index) => {
+                return (
+                    <a
+                        href="#"
+                        class="hover:scale-105 transition duration-300 relative  flex justify-center items-center"
+                        id="card"
+                    >
+                        <img
+                            src={`/src/assets/${donante.id}.svg`}
+                            alt={`Imagen de donante ${donante.nombre}`}
+                            decoding="async"
+                            
+                            class="w-[200px] "
+                        />
+                        
+                    </a>
+                );
+            })
+        }
+    </div>
 </main>
